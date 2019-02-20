@@ -20,9 +20,9 @@ class Popbox{
 		if(triggers){
 			for (var i = 0; i < triggers.length; i++) {
 			    triggers[i].addEventListener('click', function(e){
-			   		e.preventDefault();
 					var popbox_id = this.getAttribute('data-popbox-target');
 					if(popbox_id){
+			   			e.preventDefault();
 						self.open(popbox_id);
 					}
 			    }, false);
@@ -31,9 +31,9 @@ class Popbox{
 		if(closers){
 			for (var i = 0; i < closers.length; i++) {
 			    closers[i].addEventListener('click', function(e){
-			   		e.preventDefault();
 					var popbox_id = this.getAttribute('data-popbox-close');
 					if(popbox_id){
+			   			e.preventDefault();
 						self.close(popbox_id);
 					}
 			    }, false);
@@ -42,9 +42,9 @@ class Popbox{
 		if(popboxs){
 			for (var i = 0; i < popboxs.length; i++) {
 			    popboxs[i].addEventListener('click', function(e){
-			   		e.preventDefault();
 					var popbox_id = e.target.getAttribute('data-popbox-id');
 					if(popbox_id){
+			   			e.preventDefault();
 						self.close(popbox_id);
 					}
 			    }, false);
